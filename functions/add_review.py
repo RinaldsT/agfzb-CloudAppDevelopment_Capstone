@@ -15,7 +15,7 @@ import requests
 def main(params):
     
     try:
-        client = Cloudant.iam("6f6ac427-e3b6-4d64-b356-7f445fe09768-bluemix", "kKPkmJ1jBgL15LjjFZflXHkmiBnINmEBsy3rRuaWfupD", connect=True)
+        client = Cloudant.iam(params['USER'], params['API'], connect=True)
         dbs = client.all_dbs()
         reviewdb = client[dbs[1]]
 
